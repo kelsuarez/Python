@@ -17,5 +17,17 @@ print(my_variable, my_int_variable, my_bool_variable)
 my_int_str_variable = str(my_int_variable)
 print(my_int_str_variable)
 print(type(my_int_str_variable))
-
 # Al utilizar un str convertimos la variable my_int_variable que era un numero 5 en string
+
+print(type(print(my_int_str_variable)))
+# Al hacer esto rompemos 
+
+# FUNCIONES DEL SISTEMA
+
+print(len(my_int_str_variable))
+# Cuenta el numero de caracteres que contiene la variable, en este caso como es un numero me da como resultado 1
+
+# VARIABLES EN UNA SOLA LINEA
+name, surname, alias, age = "Kelvin", "Suarez", "kel", 28
+
+print(name, surname, alias, age) 
