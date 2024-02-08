@@ -1,43 +1,50 @@
-# VARIABLES
-# Todas las variables se escriben en minuscula 
+# Clase en vídeo: https://youtu.be/Kp4Mvapo5kc?t=2938
 
-my_variable = "My string variable"
-print(my_variable)
+### Variables ###
+
+# Todas las variables se deben escriben en minuscula 
+
+my_string_variable = "My String variable"
+print(my_string_variable)
 
 my_int_variable = 5
 print(my_int_variable)
 
+my_int_to_str_variable = str(my_int_variable)
+print(my_int_to_str_variable)
+print(type(my_int_to_str_variable))
+
 my_bool_variable = False
 print(my_bool_variable)
 
-# Concatenacion de variables en un print
-print(my_variable, my_int_variable, my_bool_variable)
-# Si le coloco una , puedo adjuntar varias variables en una sola 
+# Concatenación de variables en un print
+print(my_string_variable, my_int_to_str_variable, my_bool_variable)
+print("Este es el valor de:", my_bool_variable)
 
-my_int_str_variable = str(my_int_variable)
-print(my_int_str_variable)
-print(type(my_int_str_variable))
-# Al utilizar un str convertimos la variable my_int_variable que era un numero 5 en string
-
-print(type(print(my_int_str_variable)))
-# Al hacer esto rompemos 
-
-# FUNCIONES DEL SISTEMA
-
-print(len(my_int_str_variable))
+# Algunas funciones del sistema
+print(len(my_string_variable))
 # Cuenta el numero de caracteres que contiene la variable, en este caso como es un numero me da como resultado 1
 
-# VARIABLES EN UNA SOLA LINEA (NO AABUSAR DE LA SINTAXIS)
-name, surname, alias, age = "Kelvin", "Suarez", "kel", 28
-print("Me llamo:", name, surname, ". Mi edad es:", age, ". Y mi alias es: ", alias)
+# Variables en una sola línea. ¡Cuidado con abusar de esta sintaxis!
+name, surname, alias, age = "Kelvin", "Suarez", 'Kel', 29
+print("Me llamo:", name, surname, ". Mi edad es:",
+    age, ". Y mi alias es:", alias)
 
-# INPUTS 
-# Con los inputs podemos imprimir directamente desde la terminal, es decir, segun el elemento que le asignemos a la pregunta obtendremos un resultado
-"""
-first_name =  input('Cual es tu nombre?: ')
-my_age = input('Que edad tienes?: ')
+# Inputs
+name = input('¿Cuál es tu nombre? ')
+age = input('¿Cuántos años tienes? ')
+print(name)
+print(age)
 
-print(first_name)
-print(my_age)
-"""
-#En este caso, pedimos une informacion y luego imprimimos la respuesta 
+# Cambiamos su tipo
+name = 29
+age = "Kelvin"
+print(name)
+print(age)
+
+# ¿Forzamos el tipo?
+address: str = "Mi dirección"
+address = True
+address = 5
+address = 1.2
+print(type(address))
