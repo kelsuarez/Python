@@ -27,7 +27,17 @@ print(type(print(my_int_str_variable)))
 print(len(my_int_str_variable))
 # Cuenta el numero de caracteres que contiene la variable, en este caso como es un numero me da como resultado 1
 
-# VARIABLES EN UNA SOLA LINEA
+# VARIABLES EN UNA SOLA LINEA (NO AABUSAR DE LA SINTAXIS)
 name, surname, alias, age = "Kelvin", "Suarez", "kel", 28
+print("Me llamo:", name, surname, ". Mi edad es:", age, ". Y mi alias es: ", alias)
 
-print(name, surname, alias, age) 
+# INPUTS 
+# Con los inputs podemos imprimir directamente desde la terminal, es decir, segun el elemento que le asignemos a la pregunta obtendremos un resultado
+"""
+first_name =  input('Cual es tu nombre?: ')
+my_age = input('Que edad tienes?: ')
+
+print(first_name)
+print(my_age)
+"""
+#En este caso, pedimos une informacion y luego imprimimos la respuesta 
