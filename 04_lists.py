@@ -7,15 +7,22 @@
 my_list = list()
 my_other_list = []
 
+# La lista sirve para anadir elementos cada uno en una posición (primer elemento 0 | segundo elemento 1 ...)
 print(len(my_list))
 
+# Anado elementos a mi lista
 my_list = [35, 24, 62, 52, 30, 30, 17]
 
+# Compruebo cuando elementos tengo en mi lista
 print(my_list)
+
+# Compruebo la cantidad de elementos que tengo en mi lista
 print(len(my_list))
 
-my_other_list = [35, 1.77, "Brais", "Moure"]
+# Anado elementos a mi lista
+my_other_list = [29, 1.70, "Kelvin", "Suarez"]
 
+# Compruebo que tipo de dato es (class 'list') para ambos
 print(type(my_list))
 print(type(my_other_list))
 
