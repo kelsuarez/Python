@@ -31,7 +31,7 @@ def sum_two_values_with_return(first_value, second_value):
     my_sum = first_value + second_value
     return my_sum
 
-
+# Debo crear una variable si quiero poder utilisarlo
 my_result = sum_two_values(1.4, 5.2)
 print(my_result)
 
@@ -44,7 +44,7 @@ print(my_result)
 def print_name(name, surname):
     print(f"{name} {surname}")
 
-
+# Puedo cambiar el orden, pero siempre tomando en cuenta la cantidad de parametros que hay
 print_name(surname="Kelvin", name="Suarez")
 
 # Función con parámetros de entrada/argumentos por defecto
@@ -57,9 +57,12 @@ def print_name_with_default(name, surname, alias="Sin alias"):
 print_name_with_default("Suarez", "Kelvin")
 print_name_with_default("Suarez", "Kelvin", "Keke")
 
+
+
+
 # Función con parámetros de entrada/argumentos arbitrarios
 
-
+# Al colocar el * me permite de pasar el numero de datos que yo necesite
 def print_upper_texts(*texts):
     print(type(texts))
     for text in texts:
