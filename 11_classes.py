@@ -4,6 +4,10 @@
 
 # Definición
 
+# Una clase es una plantilla para la creación de objetos. Define las propiedades y comportamientos comunes que tendrán los objetos que se creen a partir de ella. Una clase define el comportamiento de un objeto y los datos que contiene.
+
+# En términos más simples, una clase puede considerarse como un plano o un diseño que describe cómo se deben construir los objetos. Contiene métodos (funciones definidas dentro de la clase) y atributos (variables definidas dentro de la clase) que especifican el comportamiento y las características de los objetos que se instancian a partir de ella.
+
 class MyEmptyPerson:
     pass  # Para poder dejar la clase vacía
 
