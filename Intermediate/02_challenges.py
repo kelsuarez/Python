@@ -149,7 +149,7 @@ def invertir_cadena(cadena):
     return cadena_invertida
 
 # Ejemplo de uso
-texto = "Me estoy muriendo"
+texto = "Me estoy muriendo horrible con todo esto"
 texto_invertido = invertir_cadena(texto)
 print(texto_invertido)
 
@@ -164,3 +164,47 @@ def reverse(text):
 
 print(reverse("Hola mundo"))
 """
+
+# ---------------------------------------------------------------------
+
+"""
+CONTANDO PALABRAS
+Crea un programa que cuente cuantas veces se repite cada palabra
+y que muestre el recuento final de todas ellas.
+Los signos de puntuación no forman parte de la palabra.
+Una palabra es la misma aunque aparezca en mayúsculas y minúsculas.
+No se pueden utilizar funciones propias del lenguaje que
+lo resuelvan automáticamente.
+"""
+
+
+text = input("Ingrese una cadena de texto: ")
+
+# Remuevo todos signos
+remove = ",;:\n!\"'"
+for caracter in remove:
+    text = text.replace(caracter,
+                        "")
+# Convierto el texto en minuscula
+text = text.lower()
+
+# Divido una cadena de texto en una lista de palabras utilizando como separador especifico los espacios " "
+words = text.split(" ")
+
+# Creo un diccionario vacio 
+dictionary_frequency = {}
+
+# Recorro mi lista y actualizo el diccionario para contar la frecuencia de cada palabra
+for word in words:
+    if word in dictionary_frequency:
+        dictionary_frequency[word] += 1
+    else:
+        dictionary_frequency[word] = 1
+
+for word in dictionary_frequency:
+    frequency = dictionary_frequency[word]
+    print(f"La palabra '{word}' tiene una frecuencia de {frequency}")
+    
+    
+# ---------------------------------------------------------------------
+
