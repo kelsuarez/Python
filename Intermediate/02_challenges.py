@@ -208,3 +208,109 @@ for word in dictionary_frequency:
     
 # ---------------------------------------------------------------------
 
+"""
+CODIGO MORSE
+Crea un programa que sea capaz de transformar texto natural a código
+morse y viceversa.
+Debe detectar automáticamente de qué tipo se trata y realizar
+la conversión.
+En morse se soporta raya "—", punto ".", un espacio " " entre letras
+o símbolos y dos espacios entre palabras "  ".
+"""
+
+def texto_a_morse(texto):
+    morse = {
+        "a": ".-",
+        "b": "-...",
+        "c": "-.-.",
+        "ch": "----",
+        "d": "-..",
+        "e": ".",
+        "f": "..-.",
+        "g": "--.",
+        "h": "....",
+        "i": "..",
+        "j": ".---",
+        "k": "-.-",
+        "l": ".-..",
+        "m": "--",
+        "n": "-.",
+        "ñ": "--.--",
+        "o": "---",
+        "p": ".--.",
+        "q": "--.-",
+        "r": ".-.",
+        "s": "...",
+        "t": "-",
+        "u": "..-",
+        "v": "...-",
+        "w": ".--",
+        "x": "-..-",
+        "y": "-.--",
+        "z": "--..",
+        "0": "-----",
+        "1": ".----",
+        "2": "..---",
+        "3": "...--",
+        "4": "....-",
+        "5": ".....",
+        "6": "-....",
+        "7": "--...",
+        "8": "---..",
+        "9": "----.",
+        ".": ".-.-.-",
+        ",": "--..--",
+        "?": "..--..",
+        " ": ".-..-."
+    }
+    morse_texto = ""
+    for letra in texto:
+        if letra.lower() in morse:
+            morse_texto += morse[letra.lower()] + " "
+    return morse_texto
+
+def morse_a_texto(morse):
+    morse_inverso = {valor: clave for clave, valor in morse.items()}
+    morse_palabras = morse.split("  ")
+    texto = ""
+    for palabra in morse_palabras:
+        caracteres = palabra.split(" ")
+        for caracter in caracteres:
+            if caracter in morse_inverso:
+                texto += morse_inverso[caracter]
+        texto += " "
+    return texto
+
+def detectar_tipo(entrada):
+    if any(letra in entrada.lower() for letra in ".-"):
+        return "morse"
+    else:
+        return "texto"
+
+entrada = input("Ingrese texto o código Morse: ")
+
+tipo = detectar_tipo(entrada)
+
+if tipo == "texto":
+    resultado = texto_a_morse(entrada)
+    print("Texto a código Morse:")
+    print(resultado)
+elif tipo == "morse":
+    resultado = morse_a_texto(entrada)
+    print("Código Morse a texto:")
+    print(resultado)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
